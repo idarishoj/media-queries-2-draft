@@ -4,8 +4,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --mint: #EFFAF1;
+  --green: #335C67;
+  --blue: #006ED4;
+  --black: #231B1D;
+}
+
 html {
   font-family: 'Outfit', sans-serif;
+  background-color: var(--mint);
+  color: var(--black);
 }
 
 p {
