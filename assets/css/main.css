@@ -15,8 +15,141 @@ html {
   font-family: 'Outfit', sans-serif;
   background-color: var(--mint);
   color: var(--black);
+  font-size: 18px;
 }
 
 p {
   line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+.site-width {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem; /* 1.5 * font-size on the html which was 18px = 27 px */
+}
+
+/* navigation */
+nav a {
+  text-decoration: none;
+  color: var(--blue);
+  margin: 0 0.6rem;
+}
+
+nav a:first-child {
+  margin-left: 0;
+}
+
+/* titles */
+.title {
+  margin: 8rem 0 1rem;
+  font-size: 5vw;
+}
+
+.subtitle {
+  margin: 1rem 0;
+  font-size: 2.5vw;
+}
+
+.title,
+.subtitle {
+  font-weight: 200;
+  color: var(--green);
+}
+
+/* section */
+.grid-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem 1rem;
+}
+
+.section-title {
+  grid-column: span 3;
+  color: var(--blue);
+}
+
+.spaced-section {
+  margin: 8rem 0;
+}
+
+.grid-container article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.grid-container article h5 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.grid-container article .price {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  font-size: .8rem;
+  width: max-content;
+  transition: all 0.2s ease-out;
+}
+
+.btn:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+
+@media screen and (max-width: 1365px) {
+  .title {
+    font-size: 6.5vw;
+  }
+
+  .subtitle {
+    font-size: 2.6vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 8vw;
+  }
+
+  .subtitle {
+    font-size: 3.6vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr 1fr 1fr;
+  }
+
+  .grid-container .section-title {
+    grid-column: auto;
+  }
+
+  .title {
+    font-size: 10vw;
+  }
+
+  .subtitle {
+    font-size: 6vw;
+  }
+
+  .title, .subtitle {
+    font-weight: 600;
+  }
 }
